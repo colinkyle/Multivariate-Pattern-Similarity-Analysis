@@ -14,7 +14,6 @@ x = dir(fullfile(wildcards));
 x = x(~[x(:).isdir]);
 Out = {x(:).name};
 Out = Out';
-Out = sort_nat(Out);
 if ~isempty(varargin)
     [path,name,ext] = cellfun(@fileparts,Out,'UniformOutput',false);
     for i = 1:numel(varargin)
